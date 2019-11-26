@@ -1,0 +1,58 @@
+git config -l
+cd
+cp  // copy
+ll
+ls
+dir
+mkdir
+git init .  // Новая база гит.
+ls -la
+git status
+git mv
+git clean
+git diff                // Вычисление разницы между ветвями, комитом.
+git diff --staged
+git diff master branch_name
+echo "some text" > file_name.xxx
+echo "add some" >> file_name.xxx
+nano file_name.txt
+git checkout -- file_name.xxx    // Отменить изменения в файле.
+git checkout .                   // Отменить все изменения.
+git reset <file_name>            // Вернуть из стейджа.
+git reset .
+nano .gitignore   // Список игнорируемых фалов и директорий.
+git add *
+git add .
+git add <file_name>
+git diff --staged   // Просмотреть изменения перед комитом.
+git rm --cached file_name   // Убрать из индекса.
+git log -2
+git log -1 -p
+git clone https://github.com/user_name/dir_name.git
+git push origin
+git push -u origin master
+git remote -v   // Текущий удаленный репозиторий.
+git remote set-url origin git@github.com:...    // Сменить удаленный репозиторий.
+git remote add origin <url>
+git branch
+git branch new_name_branch
+git checkout -b new_name_branch
+git checkout name_branch    // Перейти в ветку.
+git branch -d name_branch   // Удалить ветку.
+git branch -m new_name      // Переименовать текущую ветку.
+git merge name_branch       // Соединить ветку с master.
+git checkout hashcode       // Возврат на комит по хеш коду.
+git checkout master         // Вернуть последний комит в master.
+git commit --amend          // Редактировать последний комит.
+git reset --hard HEAD~(2)   // Удалить количество комитов.
+git reset --hard HEAD^1
+git reset --soft HEAD~(3)   // Удалить комиты без удаления изменений в файлах.
+git push --set-upstream origin name_branch      // Добавить новую ветку на сервер.
+git fetch => git pull       //
+git pull <url>
+git show
+
+
+
+
+
