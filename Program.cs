@@ -4,10 +4,11 @@ namespace LearnCode
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+            Run.Main1();
+            //test.Main31414();
+            
         }
     }
 }
