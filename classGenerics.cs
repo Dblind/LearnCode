@@ -1,8 +1,37 @@
 using System;
 
-class PhoneNumber
+public interface IPhoneNumber
 {
-    public PhoneNumber(string n, string num)
+    string Number
+    {
+        get;
+        set;
+    }
+    string Name
+    {
+        get;
+        set;
+    }
+}
+class Friends : IPhoneNumber
+{
+    public Friends(string n, string num, bool wk)
+    {
+        Name = n;
+        Number = num;
+        IsWorkNumber = wk;
+    }
+    public bool IsWorkNumber
+    {
+        get;
+        private set;
+    }
+    public string Name { get; set; }
+    public string Number { get; set; }
+}
+class Supplier : IPhoneNumber
+{
+    public Supplier(string n, string num)
     {
         Name = n;
         Number = num;
@@ -10,21 +39,31 @@ class PhoneNumber
     public string Name { get; set; }
     public string Number { get; set; }
 }
-class Friends : PhoneNumber
-{
-    public Friends(string n, string num, bool wk) :
-        base(n, num)
-    {
-        isWorkNumber = wk;
-    }
-    public bool isWorkNumber { get; private set; }
-}
-class Supplier : PhoneNumber
-{
-    public Supplier(string n, string num) : base(n, num) { }
-}
+// class PhoneNumber
+// {
+//     public PhoneNumber(string n, string num)
+//     {
+//         Name = n;
+//         Number = num;
+//     }
+//     public string Name { get; set; }
+//     public string Number { get; set; }
+// }
+// class Friends : PhoneNumber
+// {
+//     public Friends(string n, string num, bool wk) :
+//         base(n, num)
+//     {
+//         isWorkNumber = wk;
+//     }
+//     public bool isWorkNumber { get; private set; }
+// }
+// class Supplier : PhoneNumber
+// {
+//     public Supplier(string n, string num) : base(n, num) { }
+// }
 class EmailFriend { }
-class PhoneList<T> where T : PhoneNumber
+class PhoneList<T> where T : IPhoneNumber   //PhoneNumber
 {
     T[] phList;
     int end;
@@ -46,7 +85,7 @@ class PhoneList<T> where T : PhoneNumber
         {
             if (phList[i].Name == name) return phList[i];
         }
-        throw new DllNotFoundException();
+        throw new NotFoundException();
     }
     public T FindByNumber(string number)
     {
@@ -83,7 +122,7 @@ class Run
         {
             Friends frnd = plist.FindByName("Garry");
             System.Console.Write(frnd.Name + " " + frnd.Number);
-            if (frnd.isWorkNumber)
+            if (frnd.IsWorkNumber)
                 Console.WriteLine(" (рабочий)");
             else
                 System.Console.WriteLine();
