@@ -4,9 +4,12 @@ namespace LearnCode
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            //test.TestMain();
+            //Test4.MainContrVar();
+            //test.Main31414();
+            //Test2.MainCat();
         }
     }
 }

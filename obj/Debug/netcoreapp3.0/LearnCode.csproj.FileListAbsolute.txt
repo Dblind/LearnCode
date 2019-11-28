@@ -1,0 +1,11 @@
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode.deps.json
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode.runtimeconfig.json
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode.runtimeconfig.dev.json
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode.dll
+/home/ivan/GitLearn/LearnCode/bin/Debug/netcoreapp3.0/LearnCode.pdb
+/home/ivan/GitLearn/LearnCode/obj/Debug/netcoreapp3.0/LearnCode.csprojAssemblyReference.cache
+/home/ivan/GitLearn/LearnCode/obj/Debug/netcoreapp3.0/LearnCode.AssemblyInfoInputs.cache
+/home/ivan/GitLearn/LearnCode/obj/Debug/netcoreapp3.0/LearnCode.AssemblyInfo.cs
+/home/ivan/GitLearn/LearnCode/obj/Debug/netcoreapp3.0/LearnCode.dll
+/home/ivan/GitLearn/LearnCode/obj/Debug/netcoreapp3.0/LearnCode.pdb
