@@ -6,9 +6,10 @@ namespace LearnCode
     {
         static void Main()
         {
-            Run.Main1();
+            //test.TestMain();
+            //Test4.MainContrVar();
             //test.Main31414();
-            
+            //Test2.MainCat();
         }
     }
 }
