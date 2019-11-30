@@ -1,41 +1,51 @@
 using System;
 
-class test
+class Test34
 {
-    class A
+    interface IWriter
     {
-        public void Hello()
+        void Write(string text);
+    }
+    class TextWorker
+    {
+        public IWriter Writer {get;set;}
+        public void WriteText(string text)
         {
-            System.Console.WriteLine("Hello!");
+            text += " some";
+            Writer.Write(text);
         }
     }
-    class B : A { }
-    class C : B { }
-    class D { }
-
-    public static void Main31414()
+    class StandartWriter : IWriter
     {
-        A a = new A();
-        B b = new B();
-        C c = new C();
-        D d = new D();
-        GenericT<A> aGT = new GenericT<A>(a);
-        GenericT<B> bGT = new GenericT<B>(b);
-        GenericT<C> cGT = new GenericT<C>(c);
-        //GenericT<D> dGT = new GenericT<D>(d);
-    }
-
-    class GenericT<T> where T : A
-    {
-        T t;
-        public GenericT(T t)
+        public void Write(string text)
         {
-            this.t = t;
+            Console.WriteLine(text);
         }
-        public void Display()
+    }
+    class BracesWriter : IWriter
+    {
+        public void Write(string text)
         {
-            t.Hello();
+            System.Console.WriteLine("{"+text+"}");
+        }
+    }
+    class SquareWriter : IWriter
+    {
+        public void Write(string text)
+        {
+            System.Console.WriteLine("["+text+"]");
         }
     }
 
+    public static void MaitInterface()
+    {
+        TextWorker textWorker = new TextWorker();
+
+        textWorker.Writer = new StandartWriter();
+        textWorker.WriteText("text");
+        textWorker.Writer = new BracesWriter();
+        textWorker.WriteText("text");
+        textWorker.Writer = new SquareWriter();
+        textWorker.WriteText("text");
+    }
 }
