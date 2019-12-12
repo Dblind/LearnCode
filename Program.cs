@@ -11,7 +11,10 @@ namespace LearnCode
             //test.Main31414();
             //Test2.MainCat();
             //Test34.MaitInterface();
-            ProgramFind.FindMain();
+            //ProgramFind.FindMain();
+            // Test23.TMain();
+            //LinqTest.LTString_2();
+            LinqTest.LT_10();
         }
     }
 }

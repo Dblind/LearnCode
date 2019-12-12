@@ -1,51 +1,24 @@
 using System;
-
-class Test34
+using System.Collections;
+using System.Collections.Generic;
+class Test23
 {
-    interface IWriter
+    //abcdefghijklmnopqrstuvwxyz
+    public static void TMain()
     {
-        void Write(string text);
+        int[] nums = { -22, 33, 4, 6, -11, 22, -1, 10 };
+        CheckArr(nums);
+        //     int[] nums2 = { 22, 3, 4, 1 };
+        //     System.Console.WriteLine(CheckArr(nums2));
+        //     int[] nums3 = { 3, 22, 14, 5 };
+        //     System.Console.WriteLine(CheckArr(nums3));
     }
-    class TextWorker
+    static void CheckArr(int[] t)
     {
-        public IWriter Writer {get;set;}
-        public void WriteText(string text)
+        foreach (var e in t)
         {
-            text += " some";
-            Writer.Write(text);
+            if (e < -10 || e > 10) System.Console.Write("+");
+            else System.Console.Write("-");
         }
-    }
-    class StandartWriter : IWriter
-    {
-        public void Write(string text)
-        {
-            Console.WriteLine(text);
-        }
-    }
-    class BracesWriter : IWriter
-    {
-        public void Write(string text)
-        {
-            System.Console.WriteLine("{"+text+"}");
-        }
-    }
-    class SquareWriter : IWriter
-    {
-        public void Write(string text)
-        {
-            System.Console.WriteLine("["+text+"]");
-        }
-    }
-
-    public static void MaitInterface()
-    {
-        TextWorker textWorker = new TextWorker();
-
-        textWorker.Writer = new StandartWriter();
-        textWorker.WriteText("text");
-        textWorker.Writer = new BracesWriter();
-        textWorker.WriteText("text");
-        textWorker.Writer = new SquareWriter();
-        textWorker.WriteText("text");
     }
 }
